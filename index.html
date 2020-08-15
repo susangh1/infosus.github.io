@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ghimire Susan - Homepage</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+     
+    <div class="background">
+	
+		<div class="btn">
+		<input type="button" class="btn1" value="Home" onclick="function1()"/><br/>
+		<input type="button" class="btn2" value="About Me" onclick="function2()"/><br/>
+		<input type="button" class="btn3" value="Gallery" onclick="function3()"/><br/>
+		<input type="button" class="btn3" value="Feedback" onclick="function4()"/><br/>
+		<input type="button" class="btn4" value="Contact Me" onclick="function5()"/><br/>
+	
+		</div>
+                
+            <div class="content">		
+<h2>Current Time</h2>
+<div id="clockDisplay" class="clockstyle"></div>
+<script type="text/javascript" language="javascript">
+function renderTime(){
+var currentTime=new Date();
+var diem="AM";
+var h=currentTime.getHours();
+var m=currentTime.getMinutes();
+var s=currentTime.getSeconds();
+
+setTimeout('renderTime()',1000);
+if(h==0){
+h=12;
+}
+else if(h>12){
+h=h-12;
+diem="PM";
+}
+if(h<10){
+h="0"+h;
+}
+if(m<10){
+m="0"+m;
+}
+if(s<10){
+s="0"+s;
+}
+var myClock=document.getElementById('clockDisplay');
+myClock.innerText=h+":"+m+":"+s+" "+diem;
+}
+renderTime();
+</script>
+
+
+	
+		<div class="home" id="homes">
+			<h1>I am Susan Ghimire</h1>
+			<h3>IT Student</h3>
+		</div>
+
+		<div class="aboutus" id="abt">
+			<p>Hello!<br/>Its me,Susan Ghimire from Bhaktapur.<br/>
+			I am studying my Bachelor's program in IT Engineering in NCIT college of Balkumari being affiliated to PU.<br/>
+			I am pretty competitive.It seemed like a challange for me and I love to challange myself.<br/>
+			Hope you will love my first selfmade webpage. :)</br> 
+			</p>
+		
+		</div>
+
+<div class="gallery" id="gal">
+
+	<div class="image">
+		<a href="1.jpg" target="_blank"><img src="1.jpg"/></a>
+	</div>
+	<div class="image">
+		<a href="2.jpg" target="_blank"><img src="2.jpg"/></a>
+	</div>
+	<div class="image">
+		<a href="s.jpg" target="_blank"><img src="s.jpg"/></a>
+	</div>
+	<div class="image">
+		<a href="p.jpg" target="_blank"><img src="p.jpg"/></a>
+	
+	</div>
+</div>
+
+
+<div class="contactme" id="msg">
+<div class="img">
+<a href="https://www.facebook.com/susan.ghimire.737" target="_blank"><img class="a" src="facebook.png" height="15%" width="15%" alt="Facebook"/></a>
+<a href="https://www.instagram.com/susgh_" target="_blank"><img class="b" src="iinstagram.png" height="14%" width="14%" alt="Instagram"/></a><br/>
+<a href="susgh39@gmail.com"><img class="d" src="email.png" height="15%" width="15%" alt="Mail"/></a>
+</div>
+<div class="para">
+<img src="ftcall.png" height="30" width="30"/><p>9840077693</p></div>
+</div>
+</div>
+
+<script type="text/javascript">
+function function1()
+{
+	var obj1=document.getElementById("homes");
+	var obj2=document.getElementById("abt");
+	var obj3=document.getElementById("gal");
+	var obj4=document.getElementById("cnt");
+	var obj5=document.getElementById("msg");
+	obj1.style.visibility="visible";
+	obj2.style.visibility="hidden";
+	obj3.style.visibility="hidden";
+	obj4.style.visibility="hidden";
+	obj5.style.visibility="hidden";
+}
+
+function function2()
+{
+	var obj1=document.getElementById("homes");
+	var obj2=document.getElementById("abt");
+	var obj3=document.getElementById("gal");
+	var obj4=document.getElementById("cnt");
+	var obj5=document.getElementById("msg");
+	obj1.style.visibility="hidden";
+	obj2.style.visibility="visible";
+	obj3.style.visibility="hidden";
+	obj4.style.visibility="hidden";
+	obj5.style.visibility="hidden";
+	obj6.style.visibility="hidden";
+	
+	}
+	function function3()
+{
+	var obj1=document.getElementById("homes");
+	var obj2=document.getElementById("abt");
+	var obj3=document.getElementById("gal");
+	var obj4=document.getElementById("cnt");
+	var obj5=document.getElementById("msg");
+	obj1.style.visibility="hidden";
+	obj2.style.visibility="hidden";
+	obj3.style.visibility="visible";
+	obj4.style.visibility="hidden";
+	obj5.style.visibility="hidden";
+	obj6.style.visibility="hidden";
+	
+	}
+
+	function function4()
+{
+	var obj1=document.getElementById("homes");
+	var obj2=document.getElementById("abt");
+	var obj3=document.getElementById("gal");
+	var obj4=document.getElementById("cnt");
+	var obj5=document.getElementById("msg");
+	obj1.style.visibility="hidden";
+	obj2.style.visibility="hidden";
+	obj3.style.visibility="hidden";
+	obj4.style.visibility="hidden";
+	obj5.style.visibility="visible";
+	obj6.style.visibility="hidden";
+	
+	}
+	
+	function function5()
+{
+	var obj1=document.getElementById("homes");
+	var obj2=document.getElementById("abt");
+	var obj3=document.getElementById("gal");
+	var obj4=document.getElementById("cnt");
+	var obj5=document.getElementById("msg");
+	obj1.style.visibility="hidden";
+	obj2.style.visibility="hidden";
+	obj3.style.visibility="hidden";
+	obj4.style.visibility="hidden";
+	obj5.style.visibility="hidden";
+	obj6.style.visibility="visible";
+	
+	}
+	
+	function increaselike()
+	{
+		var numlike= parseInt(document.getElementById("likes").value);
+		numlike++;
+		document.getElementById("likes").value=numlike;
+		}
+		
+		function decreaselike()
+	{
+		var numlike= parseInt(document.getElementById("dislikes").value);
+		numlike++;
+		document.getElementById("dislikes").value=numlike;
+		}
+	</script>
+
+
+</body>
+</html>
+
